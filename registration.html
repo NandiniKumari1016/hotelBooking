@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Registration Form</title>
+    <link rel="shortcut icon" href="backimg.jfif" type="image/x-icon" />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-image">
+        <img src="backimg.jfif" alt="Hotel Icon" />
+      </div>
+      <h2 class="header-title">Hotel Booking Registration Form</h2>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="customerName">Customer Name:</label>
+          <input
+            type="text"
+            id="customerName"
+            style="width: 95%"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="checkinDate">Check-in Date:</label>
+          <input type="date" id="checkinDate" style="width: 95%" required />
+        </div>
+        <div class="form-group">
+          <label for="totalDays">Total No of Days:</label>
+          <input
+            type="number"
+            id="totalDays"
+            min="1"
+            style="width: 95%"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="totalPersons">Total No of Persons:</label>
+          <input
+            type="number"
+            id="totalPersons"
+            min="1"
+            style="width: 95%"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="roomType">Room Type:</label>
+          <select id="roomType" style="width: 98%">
+            <option value="Delux Room">Delux Room</option>
+            <option value="Suite Room">Suite Room</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Amenities:</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="amenities" value="AC" /> AC
+            </label>
+            <label>
+              <input type="checkbox" name="amenities" value="Locker" /> Locker
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="advanceAmount">Advance Amount:</label>
+          <input
+            type="number"
+            id="advanceAmount"
+            min="1"
+            style="width: 95%"
+            required
+          />
+        </div>
+        <div class="cost-summary">
+          <div class="cost-row">
+            <div class="cost-label">Total Room Cost:</div>
+            <div class="cost-value"><span id="roomCost">0</span> /-</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">Total Amenities Cost:</div>
+            <div class="cost-value"><span id="amenitiesCost">0</span> /-</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">Total Cost:</div>
+            <div class="cost-value"><span id="totalCost">0</span> /-</div>
+          </div>
+          <div class="cost-row">
+            <div class="cost-label">Balance:</div>
+            <div class="cost-value"><span id="balance">0</span> /-</div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
